@@ -1,0 +1,20 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<br>
+	<div id="home-slider">
+	  <div class="row">
+	    {% include 'templates/home-slider.twig' %}
+	  </div>
+	</div>
+<br>
+	{{page.post_content | wpautop}}
+
+{% endblock %}
+
+{% block sidebar %}
+
+    {# {% include "templates/sidebar.twig" %} #}
+
+{% endblock %}

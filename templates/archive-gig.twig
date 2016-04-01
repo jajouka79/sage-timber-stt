@@ -1,0 +1,18 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<h1>{{title}}</h1>
+
+    {% for post in posts %}
+
+
+        <div class="page-header">
+            <h2>{{ post.title }}</h2>
+        </div>
+
+        {{ post.content }}
+
+    {% endfor %}
+
+{% endblock %}

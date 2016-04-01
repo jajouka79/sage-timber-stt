@@ -1,0 +1,78 @@
+
+<div id="homepageCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <!-- Indicators -->
+    <ol class="carousel-indicators hidden-xs">
+    
+    {% for slide in slides %}
+
+    	{% set active = '' %}
+	{% if loop.index0 == 0 %} 
+	{% set active = ' active ' %}
+	{% endif %}
+
+      <li data-target="#homepageCarousel" data-slide-to="{{ loop.index0 }}" class="{{active}}"></li>
+
+    {% endfor %}
+
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+    
+    {% for slide in slides %}
+
+    	{% set active = '' %}
+
+    	{% if loop.index0 == 0 %} 
+    	{% set active = ' active ' %}
+    	{% endif %}
+
+
+
+        <div class="item {{active}}">
+
+        {% if slide.slide_link is defined and slide.slide_image_src is defined %}
+        
+          <a href="{{ slide.slide_link }}">
+
+        {% endif %}
+
+          <img src="{{slide.slide_image_src}}" class="img-responsive">
+
+          <!--<div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-inner-wrap">
+                 <div class="promo"><h2>{{ slide.slide_heading }}</h2></div>
+                <div class="caption">{{slide.slide_desc}}</div>
+              </div>
+            </div>
+          </div> -->
+
+
+
+        {% if slide.slide_link is defined and slide.slide_image_src is defined %}
+        
+        </a>
+          
+        {% endif %}
+
+        </div><!-- end item -->
+
+
+  {% endfor %}
+
+  </div><!-- end carousel-inner -->
+
+    <a class="left carousel-control" href="#homepageCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="right carousel-control" href="#homepageCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+</div><!-- end homepageCarousel -->
+
+
+
