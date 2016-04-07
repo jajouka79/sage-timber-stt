@@ -1,0 +1,21 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+
+{% for post in posts %}
+	<div class="list-item">
+
+        <div class="blog-title list-title">
+            <h2>{{ post.title }}</h2>
+        </div>
+
+        <div class="blog-content list-content">
+        	{{ post.content | wpautop }}
+        </div>
+
+    </div>
+{% endfor %}
+
+{% endblock %}
