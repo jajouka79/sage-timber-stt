@@ -1,4 +1,5 @@
 <?php
+
 use MedusaContentSuite\Functions\Common as Common;
 use MedusaContentSuite\CMB\Meta\PostMeta as PostMeta;
 
@@ -33,7 +34,8 @@ if( $pt == "gig" ) :
 	_cmb_gig_options_price
 	_cmb_gig_options_venue
 	*/
-	dhdrhdr
+
+
 
 elseif( $pt == "video" ) :
 

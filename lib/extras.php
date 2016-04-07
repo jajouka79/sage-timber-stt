@@ -34,9 +34,6 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 
 
-
-
-
 add_filter( 'timber_context',  __NAMESPACE__ . '\\add_to_context' );
 
 function add_to_context( $data ) {
@@ -59,6 +56,7 @@ function add_to_context( $data ) {
 
   $data['header_image'] = wp_get_attachment_image( $data['header_image_id'], 'thumb-width-100', false,  $attr );
 */
+
 
   return $data;
 }
